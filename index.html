@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyCycle — Period & Wellness Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="brand" href="index.html">
+      <div class="logo">MC</div>
+      <div>
+        <div style="font-weight:700">MyCycle</div>
+        <small style="color:var(--muted)">Period & Wellness Companion</small>
+      </div>
+    </a>
+
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="features.html">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" role="region" aria-label="Intro">
+      <div class="hero-left">
+        <h1 style="margin:0; font-size:28px;">A caring period tracker that feels like a friend 🌸</h1>
+        <p style="color:var(--muted); margin-top:10px;">
+          Simple tracking, smart reminders, wellness tips, and privacy-first features — all in one friendly app.
+        </p>
+
+        <div style="margin-top:18px;">
+          <a class="btn" href="features.html">See Features</a>
+          <a class="btn secondary" href="about.html" style="margin-left:10px">Learn More</a>
+          <button id="btn-secret" class="btn" style="margin-left:10px; background:linear-gradient(90deg,var(--accent-2),var(--accent));">Secret Mode</button>
+        </div>
+
+        <div class="card-grid" style="margin-top:20px;">
+          <div class="card">
+            <h3>AI Predictions</h3>
+            <p class="muted">Smart cycle & ovulation predictions based on logs.</p>
+          </div>
+          <div class="card">
+            <h3>Wellness Tips</h3>
+            <p class="muted">Food, yoga, and meditation suggestions for cramps & PMS.</p>
+          </div>
+          <div class="card">
+            <h3>Privacy</h3>
+            <p class="muted">Secret mode (calculator disguise) and encrypted storage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mascot">
+          <!-- simple svg mascot -->
+          <svg width="140" height="140" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#fff0f6"/>
+                <stop offset="1" stop-color="#ffd4e8"/>
+              </linearGradient>
+            </defs>
+            <rect rx="24" width="200" height="200" fill="url(#g)" />
+            <circle cx="100" cy="82" r="40" fill="#fff" stroke="#ffbfd2" stroke-width="6"/>
+            <circle cx="85" cy="75" r="6" fill="#3a0d28"/>
+            <circle cx="115" cy="75" r="6" fill="#3a0d28"/>
+            <path d="M80 98 q20 18 40 0" stroke="#ff8bb3" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px;">
+      <h2 class="page-title">Why MyCycle?</h2>
+      <p style="color:var(--muted)">MyCycle simplifies cycle management and gives wellness support so tracking feels supportive, not stressful. (Based on your idea submission.)</p>
+      <p style="color:var(--muted); font-size:14px;">Quick links: <a href="features.html">Features</a> • <a href="privacy.html">Privacy</a> • <a href="contact.html">Contact</a></p>
+    </section>
+
+    <footer class="footer">
+      <small>© MyCycle — Built with care 🌸</small>
+    </footer>
+  </main>
+
+  <!-- secret overlay -->
+  <div id="secret-overlay" aria-hidden="true">
+    <div class="calc" role="dialog" aria-label="Calculator secret mode">
+      <div class="display" aria-live="polite"></div>
+      <div class="keys">
+        <div class="key" data-val="7">7</div>
+        <div class="key" data-val="8">8</div>
+        <div class="key" data-val="9">9</div>
+        <div class="key op" data-val="/">÷</div>
+
+        <div class="key" data-val="4">4</div>
+        <div class="key" data-val="5">5</div>
+        <div class="key" data-val="6">6</div>
+        <div class="key op" data-val="*">×</div>
+
+        <div class="key" data-val="1">1</div>
+        <div class="key" data-val="2">2</div>
+        <div class="key" data-val="3">3</div>
+        <div class="key op" data-val="-">−</div>
+
+        <div class="key" data-val="0">0</div>
+        <div class="key" data-val=".">.</div>
+        <div class="key" data-val="C">C</div>
+        <div class="key op" data-val="+">+</div>
+
+        <div class="key" style="grid-column:1 / span 2" data-val="(">(</div>
+        <div class="key" data-val=")">)</div>
+        <div class="key" style="grid-column:4" data-val="=">=</div>
+      </div>
+      <div style="text-align:right; margin-top:12px;">
+        <button id="secret-close" class="btn secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
